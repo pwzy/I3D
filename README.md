@@ -1,5 +1,7 @@
 # I3D models trained on Kinetics
 
+# Fork from https://github.com/piergiaj/pytorch-i3d
+
 ## Overview
 
 This repository contains trained models reported in the paper "[Quo Vadis,
