@@ -46,7 +46,7 @@ class Feature_Extractor(object):
         self.model.eval()
 
         self.trans = tf.Compose([
-                tf.Scale(size=(224, 224)),
+                tf.Resize(size=(224, 224)),
                 tf.ToTensor(),
                 tf.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5]),
             ])
