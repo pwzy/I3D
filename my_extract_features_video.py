@@ -34,12 +34,13 @@ def to_segments(data, num=32):
     return Segments_Features
 
 class Feature_Extractor(object):
-    def __init__(self, mode='RGB', load_from='./models/rgb_charades.pt'):
+    def __init__(self, mode='RGB', load_from='./models/rgb_imagenet.pt'):
         if mode == 'flow':
             self.model = InceptionI3d(400, in_channels=2)
         else:
             self.model = InceptionI3d(400, in_channels=3)
-        self.model.replace_logits(157)
+	# 原始的rgb_imagenet模型使用的logits个400,157为提取rgb_charades.pt模型使用
+        # self.model.replace_logits(157)
         self.model.load_state_dict(torch.load(load_from))
         self.model.cuda()
         self.model.eval()
