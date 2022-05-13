@@ -9,11 +9,12 @@ from tqdm import tqdm
 
 def to_segments(data, num=32):
     """
+    借鉴于：https://github.com/ekosman/AnomalyDetectionCVPR2018-Pytorch/blob/master/feature_extractor.py
 	These code is taken from:
 	https://github.com/rajanjitenpatel/C3D_feature_extraction/blob/b5894fa06d43aa62b3b64e85b07feb0853e7011a/extract_C3D_feature.py#L805
 	:param data: list of features of a certain video
 	:return: list of 32 segments
-	"""
+    """
     data = np.array(data)
     Segments_Features = []
     thirty2_shots = np.round(np.linspace(0, len(data) - 1, num=num + 1)).astype(int)
