@@ -71,7 +71,8 @@ class Feature_Extractor(object):
                     break
                 frame = Image.fromarray(frame_ori.astype('uint8'))
                 w, h = frame.size
-                frame = frame.crop((200, 0, int(w*0.55), h*0.88))
+		# 对图像进行裁剪
+                # frame = frame.crop((200, 0, int(w*0.55), h*0.88))
                 cv2.imshow('', np.array(frame))
                 cv2.waitKey(0)
                 frame = self.trans(frame)
