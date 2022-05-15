@@ -24,7 +24,7 @@ def to_segments(data, num=32):
             temp_vect = data[min(ss, data.shape[0] - 1), :]
         else:
             temp_vect = data[ss:ee, :].mean(axis=0)
-
+	# 归一化
         temp_vect = temp_vect / np.linalg.norm(temp_vect)
         if np.linalg.norm == 0:
             logging.error("Feature norm is 0")
