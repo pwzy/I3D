@@ -1,6 +1,6 @@
 # I3D models trained on Kinetics
 
-# Fork from https://github.com/piergiaj/pytorch-i3d
+# Forked from https://github.com/piergiaj/pytorch-i3d
 
 ## Overview
 
